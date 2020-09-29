@@ -13,8 +13,8 @@ let initialNumberOfGuesses = parseInt(numberOfTriesLeft.textContent);
 let testResult = 0;
 
 
-const answerNumber = 3;/*Math.floor((Math.random() * 19) + 1);*/
-console.log(answerNumber);
+const answerNumber = Math.floor((Math.random() * 19) + 1);
+
 // initialize state
 //Change DOM states here or add variables
 
