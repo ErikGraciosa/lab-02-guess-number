@@ -1,21 +1,18 @@
 // import functions and grab DOM elements
-// Marry the html tags here:
 
 import { compareNumbers } from './compareNumbers.js';
-
+// Marry the html tags here:
 const buttonSubmit = document.getElementById('button-submit');
 const numberOfTriesLeft = document.getElementById('number-of-tries-left');
 const highOrLow = document.getElementById('high-or-low');
 const winOrLose = document.getElementById('win-or-lose');
 const resultsImage = document.getElementById('results-image');
-
-//How to change image.src
-// resultsImage.src = 'assets/win.jpg';
+const buttonReset = document.getElementById('button-reset');
 
 // initialize state
 //Change DOM states here or add variables
 let testResult = 0;
-const answerNumber = Math.floor((Math.random() * 19) + 1);
+let answerNumber = Math.floor((Math.random() * 19) + 1);
 let guessesCounter = parseInt(numberOfTriesLeft.textContent);
 
 // set event listeners to update state and DOM
@@ -56,5 +53,19 @@ buttonSubmit.addEventListener('click', () => {
 
 console.log(answerNumber);
 
+buttonReset.addEventListener('click', () => {
+    //Reset variables
+    guessesCounter = 4;
+    answerNumber = Math.floor((Math.random() * 19) + 1);
+    console.log(answerNumber);
+    //Reset number
+    
+    //Reset styles
+    numberOfTriesLeft.textContent = guessesCounter;
+    winOrLose.textContent = '';
+    highOrLow.textContent = '';
+    resultsImage.src = '';
+    resultsImage.style.visibility = 'hidden';
+});
 
 
