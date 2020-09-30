@@ -38,7 +38,7 @@ buttonSubmit.addEventListener('click', () => {
         //Check if out of guesses and return loss message
         if (guessesCounter === 0) {
             alert('Out of guesses. YOU LOSE!');
-            resultsImage.src = 'assets/tenor.gif';
+            resultsImage.src = './assets/tenor.gif';
         }
     } else {
         alert('Sorry but you are out of guesses!');
@@ -48,7 +48,7 @@ buttonSubmit.addEventListener('click', () => {
         console.log('YOU WIN');
         winOrLose.textContent = 'YOU WIN';
         highOrLow.textContent = 'You guessed the number!';
-        resultsImage.src = 'assets/win.jpg';
+        resultsImage.src = './assets/win.jpg';
     } 
 });
 
