@@ -36,9 +36,10 @@ buttonSubmit.addEventListener('click', () => {
             highOrLow.textContent = 'Your guess is too low!';
         }
         //Check if out of guesses and return loss message
-        if (guessesCounter === 0) {
+        if (guessesCounter === 0 && !(testResult === 0)) {
             alert('Out of guesses. YOU LOSE!');
             resultsImage.src = './assets/tenor.gif';
+            resultsImage.style.visibility = 'visible';
         }
     } else {
         alert('Sorry but you are out of guesses!');
@@ -49,6 +50,7 @@ buttonSubmit.addEventListener('click', () => {
         winOrLose.textContent = 'YOU WIN';
         highOrLow.textContent = 'You guessed the number!';
         resultsImage.src = './assets/win.jpg';
+        resultsImage.style.visibility = 'visible';
     } 
 });
 
