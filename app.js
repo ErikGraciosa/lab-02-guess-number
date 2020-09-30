@@ -7,7 +7,10 @@ const buttonSubmit = document.getElementById('button-submit');
 const numberOfTriesLeft = document.getElementById('number-of-tries-left');
 const highOrLow = document.getElementById('high-or-low');
 const winOrLose = document.getElementById('win-or-lose');
+const resultsImage = document.getElementById('results-image');
 
+//How to change image.src
+// resultsImage.src = 'assets/win.jpg';
 
 // initialize state
 //Change DOM states here or add variables
@@ -34,7 +37,8 @@ buttonSubmit.addEventListener('click', () => {
         }
         //Check if out of guesses and return loss message
         if (guessesCounter === 0) {
-                alert('Out of guesses. YOU LOSE!');
+            alert('Out of guesses. YOU LOSE!');
+            resultsImage.src = 'assets/tenor.gif';
         }
     } else {
         alert('Sorry but you are out of guesses!');
@@ -44,6 +48,7 @@ buttonSubmit.addEventListener('click', () => {
         console.log('YOU WIN');
         winOrLose.textContent = 'YOU WIN';
         highOrLow.textContent = 'You guessed the number!';
+        resultsImage.src = 'assets/win.jpg';
     } 
 });
 

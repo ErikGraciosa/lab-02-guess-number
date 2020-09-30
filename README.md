@@ -22,4 +22,4 @@ compareNumbers will return:
     0 - the numbers are identical
     -1 - the guessed number is too low
     1 - the guessed number is too high
-Test for the three outcomes, assume valie input
+Test for the three outcomes, assume value input
